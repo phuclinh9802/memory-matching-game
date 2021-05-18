@@ -39,3 +39,5 @@ const Card = ({ project }) => {
         </ReactCardFlip>
     )
 }
+
+export default Card;

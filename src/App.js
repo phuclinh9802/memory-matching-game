@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
 import Pika from './pika.png'; // 
+import Projects from './components/Project';
 
 /*
     first - do 2 cards
@@ -9,21 +10,7 @@ import Pika from './pika.png'; //
 function App() {
   return (
     <div className="App">
-      <div className="container">
-        <div id="card">
-          <button><img src={Pika} /></button>
-        </div>
-        <div id="card">
-          <button><img src={Pika} /></button>
-        </div>
-        <div id="card">
-          <button><img src={Pika} /></button>
-        </div>
-        <div id="card">
-          <button><img src={Pika} /></button>
-        </div>
-
-      </div>
+      <Projects />
     </div>
   );
 }
