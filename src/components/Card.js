@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ReactCardFlip from 'react-card-flip'; // import card flip library for simplicity
 
+
 //styling card
 const CardStyleFront = {
     boxShadow: "0 0px 20px 0 rgba(0,0,0,0.2)",
@@ -33,7 +34,7 @@ const Card = ({ project }) => {
             <div style={CardStyleFront} onClick={() => setIsFlipped((prev) => !prev)} className="front">
             </div>
             <div style={CardStyleBack} onClick={() => setIsFlipped((prev) => !prev)} className="back">
-                <img src={project.img} />
+                <img src={project.image} />
             </div>
 
         </ReactCardFlip>

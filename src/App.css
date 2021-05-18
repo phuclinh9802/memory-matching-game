@@ -28,3 +28,9 @@ button {
   height: 50%;
   
 }
+
+.back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

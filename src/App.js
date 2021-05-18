@@ -1,6 +1,5 @@
 import './App.css';
 import React from 'react';
-import Pika from './pika.png'; // 
 import Projects from './components/Project';
 
 /*
