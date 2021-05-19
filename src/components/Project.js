@@ -7,15 +7,18 @@ const style = {
     width: "50%"
 }
 // use projects to pass in the data from data.json to display each card's info
+
 const Projects = () => {
     return (
         <div
             style={style}
             className="Projects"
         >
-            {Data.map((item, index) => (
-                <Card project={item} key={`card-${index}`} />
-            ))}
+            {Data.map((item, index) => {
+                return (
+                    <Card project={item} key={`card-${index}`} />
+                );
+            })}
         </div>
     )
 }

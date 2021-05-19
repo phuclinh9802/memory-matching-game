@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactCardFlip from 'react-card-flip'; // import card flip library for simplicity
-
+import data from '../data/data.json';
 
 //styling card
 const CardStyleFront = {
@@ -26,19 +26,67 @@ const Card = ({ project }) => {
     // initially, set flipped to false
     const [isFlipped, setIsFlipped] = useState(false);
 
+    // now, we need to check if id equals to each other, if so then alert box "Game Over!"
+    /*
+        first, create a randomized value from 1 - 2 -> create a button to randomize the images (essentially "New Game")
+        initialize boolean state - isMatched -> if matched -> alert box
+                                             -> if not, reflip both cards.
+    */
+    const [isMatched, setIsMatched] = useState(false);
+
+    function checkMatched(index1, index2) {
+        // if-else to check if index 1 === index 2
+        if (index1 === index2) {
+            setIsMatched(true);
+        }
+        else {
+            setIsMatched(false);
+        }
+        return isMatched;
+    }
+
     // render
     return (
         // not flipped yet initially
         // when clicking, set flipped to opposite bool (true -> false, and on the contrary)
-        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
-            <div style={CardStyleFront} onClick={() => setIsFlipped((prev) => !prev)} className="front">
-            </div>
-            <div style={CardStyleBack} onClick={() => setIsFlipped((prev) => !prev)} className="back">
-                <img src={project.image} />
-            </div>
+        <div>
+            <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+                <div style={CardStyleFront}
+                    onClick={() => {
+                        setIsFlipped((prev) => !prev);
+                        // when card flipped, 
 
-        </ReactCardFlip>
-    )
+                        console.log();
+                        // console.log(checkMatched(0, 0));
+                    }}
+                    className="front"
+                >
+                </div>
+                <div style={CardStyleBack} onClick={() => {
+                    setIsFlipped((prev) => !prev)
+                    console.log(false);
+                }} className="back">
+                    <img src={project.image} />
+                </div>
+            </ReactCardFlip>
+            <div>
+                {
+                    // () => checkMatched ? console.log("hello") : console.log("hi")
+                    //     //     (<ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+                    //     //         <div style={CardStyleFront} onChange={() => setIsFlipped((prev) => !prev)} className="front">
+                    //     //         </div>
+                    //     //         {/* <div style={CardStyleBack} onClick={() => setIsFlipped((prev) => !prev)} className="back">
+                    //     //     <img src={project.image} />
+                    //     // </div> */}
+                    //     //     </ReactCardFlip>) : ""
+                }
+            </div>
+        </div>
+
+
+    );
 }
 
 export default Card;
+
+
