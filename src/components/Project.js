@@ -2,12 +2,13 @@ import React from 'react';
 import Data from '../data/data.json'
 import Card from './Card'
 
+var auto = "auto";
 const style = {
     margin: "auto",
     width: "50%",
     height: "80%",
     display: "grid",
-    gridTemplateColumns: "auto auto",
+    gridTemplateColumns: "auto auto auto auto",
     justifyItems: "center",
     alignItems: "center"
 }
@@ -30,14 +31,31 @@ const Projects = () => {
         arr = new_arr;
         return arr;
     }
+
+    //function to shuffle data
+    function shuffle(arr) {
+        var currentIndex = arr.length;
+        var temp = 0;
+        var random = 0;
+        while (currentIndex !== 0) {
+            random = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+            temp = arr[currentIndex];
+            arr[currentIndex] = arr[random];
+            arr[random] = temp;
+        }
+        return arr;
+    }
     // data that is duplicated 
     let doubledData = iterate(newData);
+    // shuffle the duplicated data
+    let randomData = shuffle(doubledData);
     return (
         <div
             style={style}
             className="Projects"
         >
-            {doubledData.map((item, index) => {
+            {randomData.map((item, index) => {
                 return (
                     <Card project={item} card={doubledData[index]} key={`card-${index}`} />
                 );

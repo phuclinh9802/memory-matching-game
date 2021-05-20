@@ -7,6 +7,14 @@
         {
             "id": 2,
             "image": "http://pngimg.com/uploads/pokemon/small/pokemon_PNG146.png"
+        },
+        {
+            "id": 3,
+            "image": "http://pngimg.com/uploads/pokemon/small/pokemon_PNG147.png"
+        },
+        {
+            "id": 4,
+            "image": "http://pngimg.com/uploads/pokemon/small/pokemon_PNG132.png"
         }
     ]
 }

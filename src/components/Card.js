@@ -7,8 +7,8 @@ const CardStyleFront = {
     boxShadow: "0 0px 20px 0 rgba(0,0,0,0.5)",
     padding: "20px",
     margin: "20px",
-    width: "200px",
-    height: "300px",
+    width: "150px",
+    height: "250px",
     background: "rgba(219, 102, 102, 0.75)"
 }
 
@@ -16,8 +16,8 @@ const CardStyleBack = {
     boxShadow: "0 0px 20px 0 rgba(0,0,0,0.2)",
     padding: "20px",
     margin: "20px",
-    width: "200px",
-    height: "300px",
+    width: "150px",
+    height: "250px",
 }
 
 // create Card component with prop showing the elements in each item
