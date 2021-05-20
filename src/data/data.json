@@ -1,10 +1,12 @@
-[
-    {
-        "id": 1,
-        "image": "http://pngimg.com/uploads/pokemon/small/pokemon_PNG161.png"
-    },
-    {
-        "id": 2,
-        "image": "http://pngimg.com/uploads/pokemon/small/pokemon_PNG146.png"
-    }
-]
+{
+    "data": [
+        {
+            "id": 1,
+            "image": "http://pngimg.com/uploads/pokemon/small/pokemon_PNG161.png"
+        },
+        {
+            "id": 2,
+            "image": "http://pngimg.com/uploads/pokemon/small/pokemon_PNG146.png"
+        }
+    ]
+}

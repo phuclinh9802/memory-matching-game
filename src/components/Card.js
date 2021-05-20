@@ -4,7 +4,7 @@ import data from '../data/data.json';
 
 //styling card
 const CardStyleFront = {
-    boxShadow: "0 0px 20px 0 rgba(0,0,0,0.2)",
+    boxShadow: "0 0px 20px 0 rgba(0,0,0,0.5)",
     padding: "20px",
     margin: "20px",
     width: "200px",
@@ -21,7 +21,7 @@ const CardStyleBack = {
 }
 
 // create Card component with prop showing the elements in each item
-const Card = ({ project }) => {
+const Card = ({ project, card }) => {
 
     // initially, set flipped to false
     const [isFlipped, setIsFlipped] = useState(false);
@@ -33,6 +33,9 @@ const Card = ({ project }) => {
                                              -> if not, reflip both cards.
     */
     const [isMatched, setIsMatched] = useState(false);
+    // set state for 2 cards that are flipped
+    const [firstCard, setFirstCard] = useState(0);
+    const [secondCard, setSecondCard] = useState(0);
 
     function checkMatched(index1, index2) {
         // if-else to check if index 1 === index 2
@@ -55,9 +58,9 @@ const Card = ({ project }) => {
                     onClick={() => {
                         setIsFlipped((prev) => !prev);
                         // when card flipped, 
-
-                        console.log();
-                        // console.log(checkMatched(0, 0));
+                        // console.log(card);
+                        setFirstCard(() => card.id)
+                        console.log(card.id)
                     }}
                     className="front"
                 >
